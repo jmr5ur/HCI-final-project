@@ -33,6 +33,20 @@
     position: absolute;
 }
 
+#box {
+    width: 80px;
+    height: 40px;
+    background-color: #20ff49;
+    position: absolute;
+}
+
+#boxSelect {
+    width: 80px;
+    height: 40px;
+    background-color: #ff2323;
+    position: absolute;
+}
+
 /* <!-- HTML !-->
 <button class="button-6" role="button">Button 6</button> */
 

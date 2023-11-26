@@ -6,6 +6,11 @@ function navigate2Click(){
 function navigate2Copypaste(){
     window.location.href='copyPaste.html'
 }
+
+function navigate2Scroll() {
+    window.location.href='scroll.html'
+}
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
