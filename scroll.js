@@ -1,32 +1,42 @@
 let randBox;
 let boxSize = (2 * window.innerHeight) / 40;
+let boxList = [];
+let startTime, endTime;
+let clickCount = 0;
+let data = "";
+let trial = [];
 
 function randInt(val) {
     return Math.floor(Math.random() * val)
+}
+
+function generateBox(i){
+  box = document.getElementById('box');
+
+  box.style.left = `${window.innerWidth / 2}px`;
+  box.style.top = `${i * 40}px`;
+  if (i == randBox)
+  {
+      box.style.display = 'boxSelect';
+  }
+  else
+  {
+      box.style.display = 'box';
+  }
+  boxList.push(box)
 }
 
 function renderBoxes() {
     randBox = randInt(boxSize)
     for (let i = 0; i <= boxSize; i++)
     {
-        const box = document.getElementById('dot');
-
-        box.style.left = `${window.innerWidth / 2}px`;
-        box.style.top = `${i * 40}px`;
-        if (i == randBox)
-        {
-            box.style.display = 'boxSelect';
-        }
-        else
-        {
-            box.style.display = 'box';
-        }
-            
+      generateBox(i)
     }
+    console.log('Test completed!');
     startTime = new Date();
   }
 
-  function handleClick() {
+function handleClick() {
     endTime = new Date();
     const backButton = document.getElementById('backButton');
     const timeDiff = endTime - startTime; // in milliseconds
@@ -35,7 +45,7 @@ function renderBoxes() {
   
     clickCount++;
   
-    if (clickCount < 2) {
+    if (clickCount < 6) {
       renderBoxes()
       // trial = timeDiff + "\n";
       // data += trial;
@@ -56,7 +66,7 @@ function renderBoxes() {
     const name = localStorage.getItem('userName');
     var blob = new Blob([data], { type: "text/plain" });
     var link = document.createElement("a");
-    link.download = name + "_"+ "click.txt";
+    link.download = name + "_"+ "scroll.txt";
     link.href = URL.createObjectURL(blob);
   
     // Append the link to the body
