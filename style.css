@@ -17,6 +17,7 @@
 
 .prison {
     max-width: 600px;
+    max-height: 500px;
 }
 
 .test-container{
@@ -179,4 +180,31 @@
 
 .title {
     text-align: center;
+}
+
+#testContainer {
+  /* Ensure the container allows for vertical scrolling */
+  height: 100vh; /* Or any fixed height that fits your design */
+  overflow-y: auto; /* Enables vertical scrolling if content is taller than the container */
+  padding: 20px 0; /* Add vertical padding to the container */
+  display: flex; /* Use flexbox to lay out children */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: flex-start; /* Align children to the start of the container */
+}
+
+.button {
+  margin: 15px auto; /* Auto horizontal margin centers the button, vertical margin creates space between */
+  display: block; /* Each button on a new line */
+  box-sizing: border-box; /* Padding and borders are included in the width/height */
+  position: absolute;
+
+  /* Additional styles */
+  border: 1px solid #000; /* Optional border */
+  background-color: green; /* Replace with your desired color for green buttons */
+}
+
+.redButton {
+  background-color: red; /* Replace with your desired color for red button */
+  position: absolute;
 }
