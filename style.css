@@ -173,7 +173,7 @@
 
 /*Simple.css*/
 .notice {
-  background: #f5f7ff;
+  background: #fff5f5;
   border: 2px solid #898EA4;
   border-radius: 5px;
   padding: 1.5rem;
@@ -182,4 +182,8 @@
 
 .title {
   text-align: center;
+}
+
+.redbutton {
+  background-color: rgba(254, 40, 40, 0.956);
 }

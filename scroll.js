@@ -23,34 +23,28 @@ function generateButtons() {
   
     // Generate green buttons
     for (let i = 0; i < buttonCount; i++) {
+      let button = document.createElement("button");
+      button.style.width = `150px`;
+      button.style.height = `90px`;
+      button.style.resize = 'none';
+      button.style.left = `${window.innerWidth / 2}px`;
+      button.style.top = `${i*100}px`;
       if (i == redIndex){
         // Add the red button
-        let redButton = document.createElement("button");
-        redButton.style.width = `150px`;
-        redButton.style.height = `90px`;
-        redButton.style.resize = 'none';
-        redButton.style.left = `${window.innerWidth / 2}px`;
-        redButton.style.top = `${i*100}px`;
-        redButton.className = 'button redButton'; // Apply both classes
-        redButton.onclick = function() { handleButtonClick(this); };
-        testContainer.appendChild(redButton);
+        button.style.backgroundColor = '#fc0c0c'
+        button.className = 'button redButton'; // Apply both classes
+        button.onclick = function() { handleButtonClick(this); };
       }
       else {
-        let button = document.createElement("button");
+        button.style.backgroundColor = '#08a045'
         button.className = 'button greenButton'; // Apply both classes
-        button.style.width = `150px`;
-        button.style.height = `90px`;
-        button.style.resize = 'none';
-        button.style.left = `${window.innerWidth / 2}px`;
-        button.style.top = `${i*100}px`;
         button.onclick = function() { handleButtonClick(this); };
-        testContainer.appendChild(button);
       }
+      testContainer.appendChild(button);
     }
   
     
   }
-  
 
 function handleButtonClick(button) {
   endTime = new Date();
@@ -97,7 +91,6 @@ function saveAndDownload(data) {
 function startScrollTest() {
   initializeTestEnvironment();
   generateButtons();
-  randomizeRedButtonPosition();
   roundCount = 0; // Reset the round count
   startTime = new Date();
 }
