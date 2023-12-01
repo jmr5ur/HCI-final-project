@@ -1,37 +1,37 @@
 .main-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; 
-    height: 100vh;
-    margin: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+}
+
 .test-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    height: 100vh;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .prison {
-    max-width: 600px;
-    max-height: 500px;
+  max-width: 600px;
 }
 
-.test-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.test-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-  
+
 #dot {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 110, 255, 0.681);
-    border-radius: 50%;
-    position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 110, 255, 0.681);
+  border-radius: 50%;
+  position: absolute;
 }
 
 /* <!-- HTML !-->
@@ -47,7 +47,7 @@
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.85);
   cursor: pointer;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
@@ -86,65 +86,67 @@
 }
 
 .button-1 {
-    align-items: center;
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.85);
-    cursor: pointer;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 1.25;
-    margin: 0;
-    min-height: 3rem;
-    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
-    text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
-  }
-  
-  .button-1:hover,
-  .button-1:focus {
-    border-color: rgba(0, 0, 0, 0.15);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-    color: rgba(0, 0, 0, 0.65);
-  }
-  
-  .button-1:hover {
-    transform: translateY(-1px);
-  }
-  
-  .button-1:active {
-    background-color: #F0F0F1;
-    border-color: rgba(0, 0, 0, 0.15);
-    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-    color: rgba(0, 0, 0, 0.65);
-    transform: translateY(0);
-  }
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-1:hover,
+.button-1:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-1:hover {
+  transform: translateY(-1px);
+}
+
+.button-1:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
 /* <!-- HTML !-->
 <button class="button-89" role="button">Button 89</button> */
 
 /* CSS */
 .button-89 {
-  --b: 3px;   /* border thickness */
-  --s: .45em; /* size of the corner */
+  --b: 3px;
+  /* border thickness */
+  --s: .45em;
+  /* size of the corner */
   --color: #373B44;
-  
+
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
   background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
   transition: .2s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: .6em;
@@ -158,7 +160,7 @@
 }
 
 .button-89:hover,
-.button-89:focus-visible{
+.button-89:focus-visible {
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
@@ -171,40 +173,13 @@
 
 /*Simple.css*/
 .notice {
-    background: #f5f7ff;
-    border: 2px solid #898EA4;
-    border-radius: 5px;
-    padding: 1.5rem;
-    margin: 2rem 0;
+  background: #f5f7ff;
+  border: 2px solid #898EA4;
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin: 2rem 0;
 }
 
 .title {
-    text-align: center;
-}
-
-#testContainer {
-  /* Ensure the container allows for vertical scrolling */
-  height: 100vh; /* Or any fixed height that fits your design */
-  overflow-y: auto; /* Enables vertical scrolling if content is taller than the container */
-  padding: 20px 0; /* Add vertical padding to the container */
-  display: flex; /* Use flexbox to lay out children */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-  justify-content: flex-start; /* Align children to the start of the container */
-}
-
-.button {
-  margin: 15px auto; /* Auto horizontal margin centers the button, vertical margin creates space between */
-  display: block; /* Each button on a new line */
-  box-sizing: border-box; /* Padding and borders are included in the width/height */
-  position: absolute;
-
-  /* Additional styles */
-  border: 1px solid #000; /* Optional border */
-  background-color: green; /* Replace with your desired color for green buttons */
-}
-
-.redButton {
-  background-color: red; /* Replace with your desired color for red button */
-  position: absolute;
+  text-align: center;
 }
